@@ -14,7 +14,7 @@ pipeline {
 		stage('Reapply '){
 			steps{
 			sh '''kubectl apply -f ./documentation/nginx.yaml
-            kubectl apply -f ./documentation/api-deployment.yml
+            kubectl apply -f ./documentation/api-deployment.yaml
 			'''
 			}
 		}
