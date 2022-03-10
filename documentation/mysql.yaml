@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+spec:
+  containers:
+  - name: mysql
+    image: nmysql:5.7
+    ports:
+    -container port: 3306
+    env:
+    -name:  MYSQL_ROOT_PASSWORD
+     value: "root"
+    -name: MYSQL_DATABASE
+     value: "example-db"
+     
