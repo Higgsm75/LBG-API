@@ -16,7 +16,8 @@ pipeline {
 			steps{
 			sh '''kubectl apply -f ./documentation/nginx.yaml
             kubectl apply -f ./documentation/api-deployment.yaml
-			'''
+			kubectl rollout restart deployment/api
+            '''
 			}
 		}
         stage('Cleanup'){
