@@ -9,7 +9,7 @@ pipeline {
 		stage('Push to Dockerhub'){
 			steps{
             sh 'docker push gcp.io/lbg210222/api:v2-$BUILD_NUMBER'
-			sh 'docker push gcp.io/lbg210222/api:v2
+			sh 'docker push gcp.io/lbg210222/api:v2'
 			 }
 		}
 		stage('Reapply '){
@@ -22,7 +22,7 @@ pipeline {
 		}
         stage('Cleanup'){
 			steps{
-             sh 'docker push gcp.io/lbg210222/api:v2
+             sh 'docker push gcp.io/lbg210222/api:v2'
 			 sh 'docker push gcp.io/lbg210222/api:v2-$BUILD_NUMBER'
 			}
 		}
