@@ -33,6 +33,6 @@ spec:
     spec:
       containers:
       - name: api
-        image: higgsm/api:v2
+        image: GCP.io/lbg-210222/api:v2
         ports:
         - containerPort: 4000
