@@ -50,7 +50,7 @@ spec:
           name: nginx-config-map
       containers:
       - name: nginx
-        image: higgsm/api:v2
+        image: nginx:alpine
         ports:
         - containerPort: 80
         volumeMounts:
